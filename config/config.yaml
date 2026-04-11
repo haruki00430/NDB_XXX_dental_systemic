@@ -1,0 +1,153 @@
+project:
+  name: "NDB_XXX_dental_systemic"
+  description: "歯周病の都道府県別罹患率と糖尿病指標の生態学的関連（NDB Open Data No.10）"
+  experiment_mode: false  # true=サンプルデータ使用・透かし表示、false=本番
+
+# ========================================
+# データソース設定
+# ========================================
+data_sources:
+  ndb_root: "C:/Users/user/.ag-cursor-common/research_workspace/projects/NDB_Research_Hub/02_Data/raw/NDB_OpenData/No.10"
+  project_root: "C:/Users/user/.ag-cursor-common/research_workspace/projects/NDB_Research_Hub/projects/NDB_XXX_dental_systemic"
+
+  # 歯科傷病データ（新規抽出）
+  dental_disease:
+    path: "04_歯科傷病/01_公費レセプトを含まないデータ/都道府県別_傷病件数.xlsx"
+    header_rows: [0, 1, 2]  # 実際のヘッダー行数は確認後に修正
+
+  # 既存HbA1cプロジェクトの統合データセット（流用）
+  hba1c_existing:
+    path: "C:/Users/user/.ag-cursor-common/research_workspace/projects/NDB_Research_Hub/projects/NDB_XXX_hba1c_complications/data/interim/analysis_dataset_phase1.csv"
+
+  # 人口データ（都道府県別）
+  population:
+    source: "NDB特定健診 or Statistics_Bureau"
+
+# ========================================
+# 疾患コード定義
+# ========================================
+disease_codes:
+  periodontal:
+    code: "K05"
+    name: "歯周病"
+    description: "歯肉炎および歯周炎（ICD-10: K05）"
+
+  caries:
+    code: "K02"
+    name: "齲蝕"
+    description: "齲蝕（ICD-10: K02）"
+    use: "sensitivity_analysis"
+
+# ========================================
+# 変数定義
+# ========================================
+variables:
+  exposure:
+    primary:
+      name: "periodontal_rate"
+      label: "歯周病件数（/人口10万人）"
+      source: "dental_disease"
+      calculation: "K05件数 / 都道府県人口 × 100000"
+
+    secondary:
+      name: "caries_rate"
+      label: "齲蝕件数（/人口10万人）"
+      source: "dental_disease"
+      calculation: "K02件数 / 都道府県人口 × 100000"
+
+  outcomes:
+    primary:
+      - name: "hba1c_high_rate"
+        label: "HbA1c高値率（HbA1c≥6.5%の割合, %）"
+        source: "hba1c_existing"
+
+      - name: "dm_complication_rate"
+        label: "糖尿病合併症管理料算定率（B001-20, /10万人）"
+        source: "hba1c_existing"
+
+    secondary:
+      - name: "dialysis_prevention_rate"
+        label: "糖尿病透析予防指導管理料算定率（B001-27, /10万人）"
+        source: "hba1c_existing"
+
+      - name: "hba1c_mean"
+        label: "HbA1c平均値（%）"
+        source: "hba1c_existing"
+
+  adjustments:
+    - name: "aging_rate"
+      label: "高齢化率（%）"
+      source: "hba1c_existing"
+
+    - name: "pop_density"
+      label: "人口密度（人/km²）"
+      source: "hba1c_existing"
+
+# ========================================
+# 解析設定
+# ========================================
+analysis:
+  sample_size: 47  # 都道府県数
+
+  regression:
+    method: "OLS"
+    significance_level: 0.05
+    vif_threshold: 5.0
+
+  sensitivity_analyses:
+    - name: "Spec1_Baseline"
+      description: "ベースライン OLS"
+      covariates: ["aging_rate", "pop_density"]
+
+    - name: "Spec2_HC3"
+      description: "HC3ロバスト標準誤差"
+      covariates: ["aging_rate", "pop_density"]
+      robust: "HC3"
+
+    - name: "Spec3_OutlierExcluded"
+      description: "外れ値除外（±3SD）"
+      covariates: ["aging_rate", "pop_density"]
+      outlier_exclusion: true
+
+    - name: "Spec4_MetropolisExcluded"
+      description: "三大都市圏除外（東京・大阪・愛知）"
+      covariates: ["aging_rate", "pop_density"]
+      exclude_prefectures: ["東京都", "大阪府", "愛知県"]
+
+    - name: "Spec5_LogTransformed"
+      description: "従属変数・独立変数を対数変換"
+      covariates: ["aging_rate", "pop_density"]
+      log_transform: true
+
+    - name: "Spec6_AgingOnly"
+      description: "高齢化率のみ調整"
+      covariates: ["aging_rate"]
+
+  spatial:
+    run_morans_i: true
+    weight_type: "Queen"
+
+# ========================================
+# 出力設定
+# ========================================
+output:
+  interim_dir: "02_Data/interim"
+  results_dir: "03_Analysis/results"
+  # 原稿（04_Manuscripts）の図リンクは ../results/figures/（hba1c_complications 等と同様）
+  figures_dir: "results/figures"
+  manuscript_dir: "04_Manuscripts"
+
+  files:
+    dental_data: "dental_disease_prefecture.csv"
+    analysis_dataset: "analysis_dataset.csv"
+    regression_results: "regression_results.csv"
+    sensitivity_results: "sensitivity_analysis_results.csv"
+
+# ========================================
+# 可視化設定
+# ========================================
+visualization:
+  font: "Meiryo"
+  dpi: 300
+  figure_size: [10, 8]
+  colormap: "viridis"

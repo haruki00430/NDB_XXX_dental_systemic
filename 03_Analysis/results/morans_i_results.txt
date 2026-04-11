@@ -1,0 +1,5 @@
+Moran's I for periodontal_rate:
+  I = 0.3586
+  p-value (sim) = 0.0020
+  z-score = 3.5110
+  解釈: 有意な空間的自己相関あり

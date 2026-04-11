@@ -1,0 +1,26 @@
+空間回帰モデル（Spec8）詳細結果
+==================================================
+
+アウトカム: hba1c_high_rate  モデル: Spec8_SLM
+  β=-0.00001, SE=0.00001, p=0.2957
+  95%CI=[-0.00002, 0.00001]
+  Pseudo-R²=0.331, n=47
+  有意(p<0.05): No
+
+アウトカム: hba1c_mean  モデル: Spec8_LM_ns_OLS_OK
+  β=nan, SE=nan, p=nan
+  95%CI=[nan, nan]
+  Pseudo-R²=nan, n=47
+  有意(p<0.05): No
+
+アウトカム: dm_complication_rate  モデル: Spec8_LM_ns_OLS_OK
+  β=nan, SE=nan, p=nan
+  95%CI=[nan, nan]
+  Pseudo-R²=nan, n=47
+  有意(p<0.05): No
+
+アウトカム: dialysis_prevention_rate  モデル: Spec8_LM_ns_OLS_OK
+  β=nan, SE=nan, p=nan
+  95%CI=[nan, nan]
+  Pseudo-R²=nan, n=47
+  有意(p<0.05): No

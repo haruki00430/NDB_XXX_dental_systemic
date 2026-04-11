@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+.env.*
+
+# 解析ログ（必要ならコメントアウトして追跡）
+03_Analysis/analysis/logs/*.log
+
+# Quarto 生成 HTML（qmd を正とする場合）
+# 04_Manuscripts/*.html
