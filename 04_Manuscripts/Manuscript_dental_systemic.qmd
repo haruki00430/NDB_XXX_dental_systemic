@@ -14,8 +14,8 @@ format:
     embed-resources: true
   docx:
     number-sections: true
-bibliography: references.bib
-csl: vancouver.csl
+bibliography: ../references.bib
+csl: ../vancouver.csl
 lang: en
 ---
 
@@ -30,6 +30,9 @@ lang: en
 **Conclusions**: This ecological study provides hypothesis-generating evidence of a prefectural-level association between periodontal disease burden and diabetic complication management rates, with specificity supported by a negative control analysis. The absence of associations with HbA1c-based metrics warrants cautious interpretation. Longitudinal and individual-level studies are needed to elucidate the underlying mechanisms.
 
 **Keywords**: periodontal disease; diabetes complications; ecological study; National Database; Japan; regional disparities; negative control; spatial analysis
+
+
+**Keywords:** ecological study; Japan; health insurance claims
 
 ---
 
