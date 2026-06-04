@@ -11,7 +11,7 @@
 |---|---|---|---|---|
 | `kassebaumGlobalBurdenSevere2014` | 世界の重度歯周病負担 | 査読原著 | PMID: 25261053 / DOI: 10.1177/0022034514552491 | OK |
 | `takahashiTemporalTrendsPrevalence2019` | 日本の成人における歯周病有病の記述 | 査読原著 | PMID: 32075622 / DOI: 10.1186/s12903-020-1046-4 | OK |
-| `nakagawaRegionalDisparitiesDental2021` | NDBに基づく歯科医療利用の地域差 | 査読原著 | PMID: 34527966 / DOI: 10.1016/j.lanwpc.2021.100170 | OK |
+| `tairaRegionalInequalityDental2021` | NDBに基づく歯科医療利用の地域差 | 査読原著 | PMID: 34527966 / DOI: 10.1016/j.lanwpc.2021.100170 | OK（キー名修正済: 260604） |
 | `chappleDiabetesPeriodontalDiseases2013` | 糖尿病と歯周病の合意報告 | 査読原著 | PMID: 23627322 / DOI: 10.1111/jcpe.12077 | OK |
 | `sanzScientificEvidenceLinks2018` | 糖尿病と歯周病のエビデンス・ガイドライン | 査読原著 | PMID: 29280174 / DOI: 10.1111/jcpe.12808 | OK |
 | `mealeyDiabetesMellitusPeriodontal2007` | 糖尿病と歯周病の病態・機序の概説 | 査読原著 | PMID: 17474930 / DOI: 10.1111/j.1600-0757.2006.00193.x | OK |
@@ -25,8 +25,8 @@
 | `belloStatusCareEnd2019` | 世界のESKDケア容量・有病の国際横断 | 査読原著 | PMID: 31601586 / DOI: 10.1136/bmj.l5873 | OK |
 | `thurlowGlobalEpidemiologyEnd2021` | ESKDの世界的疫学とKRT格差 | 査読レビュー | PMID: 33752206 / DOI: 10.1159/000514550 | OK |
 | `hanafusaAnnualDialysisDataReport2025` | 日本の透析患者登録（JSDT JRDR）年次統計 | 査読原著（公式登録報告） | DOI: 10.1186/s41100-025-00646-3 | OK |
-| `mhlwNDBOpenData2024` | NDBオープンデータの出典 | 政府公開資料 | 公式ページ（bibの `note`） | OK（非PubMed） |
-| `ogataRegionalVariationDialysis2022` | 日本の都道府県レベルの腎代替療法関連の地域差 | 査読原著 | PMID: 36209260 / DOI: 10.1007/s10157-022-02284-z | OK |
+| `mhlwNDBOpenData2024` | NDBオープンデータの出典 | 政府公開資料 | URL: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html / accessed 2026-06-04 | OK（URL・アクセス日追加済: 260604） |
+| `wakasugiRegionalVariationDialysis2023` | 日本の都道府県レベルの腎代替療法関連の地域差 | 査読原著 | PMID: 36209260 / DOI: 10.1007/s10157-022-02284-z | OK（キー名修正済: 260604） |
 | `lipsitchNegativeControlsTool2010` | 負の対照の考え方 | 査読原著 | PMID: 20335814 / DOI: 10.1097/EDE.0b013e3181d61eeb | OK |
 | `whiteHeteroskedasticityConsistentCovariance1980` | HC頑健分散（White） | 査読原著 | DOI: 10.2307/1912934 | OK（PubMed非収載） |
 | `vanderweeleSensitivityAnalysisObservational2017` | E-value | 査読原著 | PMID: 28693043 / DOI: 10.7326/M16-2607 | OK |
