@@ -12,4 +12,32 @@ ENV/
 03_Analysis/analysis/logs/*.log
 
 # Quarto 生成 HTML（qmd を正とする場合）
-# 04_Manuscripts/*.html
+04_Manuscripts/*.html
+
+# 原稿バックアップ・アーカイブ（バイナリ・不要）
+04_Manuscripts/*.backup
+04_Manuscripts/*_archive.docx
+
+# data/release/ のみ追跡対象から除外解除（Zenodo公開データ）
+!data/release/
+!data/release/**
+
+# AI ツール設定フォルダ
+.antigravity/
+.cursor/
+.gemini/
+.obsidian/
+.vscode/
+.serena/
+.claude/settings.local.json
+
+# データ（生データはGit管理しない）
+02_Data/raw/
+*.parquet
+*.sqlite
+*.db
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
