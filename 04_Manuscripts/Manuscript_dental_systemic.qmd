@@ -237,7 +237,7 @@ The authors declare no conflicts of interest.
 
 # Data Availability {.unnumbered}
 
-All data are publicly available from the NDB Open Data website (https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html). Analysis code is available upon request.
+All data are publicly available from the NDB Open Data website (https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html). Analysis code and prefecture-level aggregated data (N=47) are available at: <https://doi.org/10.5281/zenodo.20696037>.
 
 # Declaration of Generative AI and AI-Assisted Technologies in the Manuscript Preparation Process {.unnumbered}
 

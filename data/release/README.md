@@ -44,9 +44,9 @@ When using this dataset, please cite:
 Saito H, et al. (2026). Geographic Association between Periodontal Disease Burden
 and Diabetes Complication Management Rates in Japan: An Ecological Study Using the
 National Database of Health Insurance Claims. [Journal].
-https://doi.org/[TBD]
+https://doi.org/[TBD upon journal acceptance]
 
-Dataset: https://doi.org/10.5281/zenodo.[TBD]
+Dataset: https://doi.org/10.5281/zenodo.20696037
 ```
 
 ## Data Sources
