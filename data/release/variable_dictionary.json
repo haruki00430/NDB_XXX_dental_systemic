@@ -1,0 +1,66 @@
+{
+  "dataset": "dental_prefecture_analysis_dataset.csv",
+  "description": "Aggregated periodontal disease and diabetes complication rates for 47 Japanese prefectures (FY2023)",
+  "n_observations": 47,
+  "unit": "prefecture (都道府県)",
+  "variables": {
+    "prefecture": {
+      "label": "Prefecture name (Japanese)",
+      "type": "string",
+      "unit": "—",
+      "source": "NDB Open Data No.10"
+    },
+    "periodontal_rate": {
+      "label": "Periodontal disease treatment rate",
+      "type": "float",
+      "unit": "visits per 100,000 population",
+      "source": "NDB Open Data No.10, FY2023, dental disease classification (K05)",
+      "notes": "Includes both chronic and acute periodontal disease"
+    },
+    "dm_complication_rate": {
+      "label": "Diabetes complication management fee (B001-20) billing rate",
+      "type": "float",
+      "unit": "billings per 100,000 population",
+      "source": "NDB Open Data No.10, FY2023, B001-20"
+    },
+    "hba1c_high_rate": {
+      "label": "Proportion with HbA1c ≥7.0% among specific health checkup recipients",
+      "type": "float",
+      "unit": "proportion (0-1)",
+      "source": "NDB Open Data No.10, FY2022 specific health checkup data"
+    },
+    "aging_rate": {
+      "label": "Proportion of population aged ≥65 years",
+      "type": "float",
+      "unit": "proportion (0-1)",
+      "source": "Statistics Bureau of Japan, 2020 Population Census"
+    },
+    "pop_density": {
+      "label": "Population density",
+      "type": "float",
+      "unit": "persons per km²",
+      "source": "Statistics Bureau of Japan, 2020 Population Census"
+    },
+    "income_per_capita": {
+      "label": "Taxable income per taxpayer (proxy for income)",
+      "type": "float",
+      "unit": "10,000 JPY per person",
+      "source": "National Tax Agency, Prefectural Tax Statistics",
+      "notes": "Encoding: cp932 (Shift-JIS) in original CSV"
+    },
+    "smoking_rate": {
+      "label": "Self-reported current smoking rate among specific health checkup recipients",
+      "type": "float",
+      "unit": "proportion (0-1)",
+      "source": "NDB Open Data No.10, FY2022 specific health checkup questionnaire (Q29)"
+    },
+    "bmi_obesity_rate": {
+      "label": "Proportion with BMI ≥25 among specific health checkup recipients",
+      "type": "float",
+      "unit": "proportion (0-1)",
+      "source": "NDB Open Data No.10, FY2022 specific health checkup data"
+    }
+  },
+  "license": "CC BY 4.0",
+  "citation": "Saito H, et al. Geographic Association between Periodontal Disease Burden and Diabetes Complication Management Rates in Japan. [Journal, Year]. DOI: TBD"
+}
