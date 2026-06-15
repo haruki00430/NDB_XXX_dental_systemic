@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software or the deposited prefecture-level dataset, please cite as below."
+type: software
+title: "Geographic Association between Periodontal Disease Burden and Diabetes Complication Management Rates in Japan: An Ecological Study Using the National Database of Health Insurance Claims"
+version: 1.0.0
+date-released: 2026-06-15
+license: MIT
+url: "https://github.com/haruki00430/NDB_XXX_dental_systemic"
+repository-code: "https://github.com/haruki00430/NDB_XXX_dental_systemic"
+doi: TBD
+abstract: >-
+  Reproducible code and prefecture-level aggregated data (N=47) for an ecological
+  study examining the association between periodontal disease burden and diabetes
+  complication management rates across Japanese prefectures, using the 10th NDB
+  Open Data (FY2023), with spatial analysis (LISA, Moran's I) and sensitivity
+  analyses including E-value and negative control outcomes.
+keywords:
+  - periodontal disease
+  - diabetes complications
+  - ecological study
+  - NDB Open Data
+  - spatial analysis
+  - Japan
+  - prefecture
+authors:
+  - family-names: Saito
+    given-names: Haruki
+    affiliation: Fukushima Medical University
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Ohira
+    given-names: Tetsuya
+    affiliation: Fukushima Medical University
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+preferred-citation:
+  type: article
+  title: "Geographic Association between Periodontal Disease Burden and Diabetes Complication Management Rates in Japan: An Ecological Study Using the National Database of Health Insurance Claims"
+  authors:
+    - family-names: Saito
+      given-names: Haruki
+    - family-names: Ohira
+      given-names: Tetsuya
+  journal: TBD
+  year: 2026
+  doi: TBD
